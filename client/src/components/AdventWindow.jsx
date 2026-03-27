@@ -160,7 +160,7 @@ export default function AdventWindow({ number, theme }) {
             fontFamily: theme.numberFont,
             fontSize: 'clamp(160px, 22vw, 380px)',
             fontWeight: 900,
-            lineHeight: 1,
+            lineHeight: 0.85,
             color: theme.numberColor,
             
             /* Premium text shadows with layered effect */
@@ -169,10 +169,12 @@ export default function AdventWindow({ number, theme }) {
               0 0 8px ${theme.accentColor}20
             `,
             
+            /* Compensate for font metrics: ascent >> descent pushes glyphs below box center */
+            marginTop: '-0.07em',
+
             /* Animation */
             animation: theme.numberAnim,
             userSelect: 'none',
-            display: 'block',
             position: 'relative',
             zIndex: 10,
             opacity: 1,

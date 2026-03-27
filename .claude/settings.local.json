@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npm install:*)",
+      "Bash(git reset:*)",
+      "Bash(npm --prefix server install)",
+      "Bash(npm --prefix client install)",
+      "Bash(powershell -Command \"Expand-Archive -Path 'C:\\\\Users\\\\wirzl\\\\Downloads\\\\git-flow \\(5\\).skill' -DestinationPath 'C:\\\\Users\\\\wirzl\\\\.claude\\\\skills' -Force\")",
+      "Bash(powershell -Command \"Copy-Item 'C:\\\\Users\\\\wirzl\\\\Downloads\\\\git-flow \\(5\\).skill' 'C:\\\\Users\\\\wirzl\\\\Downloads\\\\git-flow.zip' -Force; Expand-Archive -Path 'C:\\\\Users\\\\wirzl\\\\Downloads\\\\git-flow.zip' -DestinationPath 'C:\\\\Users\\\\wirzl\\\\.claude\\\\skills' -Force; Remove-Item 'C:\\\\Users\\\\wirzl\\\\Downloads\\\\git-flow.zip'\")"
+    ]
+  }
+}
