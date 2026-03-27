@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { getDayTheme } from '../themes.js';
 import AdventWindow from '../components/AdventWindow.jsx';
 import Particles from '../components/Particles.jsx';
@@ -6,12 +6,16 @@ import Celebration from '../components/Celebration.jsx';
 import socket from '../socket.js';
 
 export default function BigScreen() {
-  const theme = getDayTheme();
   const [windowNumber, setWindowNumber] = useState(null);
   const [inputValue, setInputValue] = useState('');
   const [qrData, setQrData] = useState(null);
   const [celebrating, setCelebrating] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  // Compute theme dynamically based on windowNumber
+  const theme = useMemo(() => {
+    return getDayTheme(windowNumber);
+  }, [windowNumber]);
 
   // Fetch config on mount
   useEffect(() => {
@@ -204,7 +208,7 @@ export default function BigScreen() {
                 position: 'absolute',
                 bottom: '28px',
                 left: 0,
-                right: '220px',
+                right: '280px',
                 textAlign: 'center',
                 fontFamily: "'Cinzel', serif",
                 fontSize: 'clamp(12px, 1.8vw, 22px)',
@@ -221,7 +225,7 @@ export default function BigScreen() {
         )}
       </div>
 
-      {/* QR code — bottom right */}
+      {/* QR code sidebar — elegant glass-morphism box on bottom right */}
       {qrData && windowNumber !== null && (
         <div
           className="absolute"
@@ -232,31 +236,46 @@ export default function BigScreen() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '8px',
+            gap: '16px',
           }}
         >
+          {/* Glass container with premium styling */}
           <div
             style={{
-              background: 'rgba(0,0,0,0.55)',
-              borderRadius: '10px',
-              padding: '10px',
+              background: 'rgba(255, 255, 255, 0.08)',
+              backdropFilter: 'blur(12px)',
+              borderRadius: '20px',
+              padding: '18px',
               border: `2px solid ${theme.frameColor}`,
-              boxShadow: `0 0 16px ${theme.accentColor}50`,
+              boxShadow: `0 0 30px ${theme.accentColor}30, inset 0 0 20px ${theme.accentColor}10`,
+              transition: 'all 0.3s ease',
+              transform: 'translateZ(0)',
             }}
           >
             <img
               src={qrData.qr}
               alt="QR Code"
-              style={{ width: '130px', height: '130px', display: 'block' }}
+              style={{
+                width: '140px',
+                height: '140px',
+                display: 'block',
+                filter: `drop-shadow(0 0 8px ${theme.accentColor}40)`,
+              }}
             />
           </div>
+
+          {/* "Scan to play" label */}
           <div
             style={{
               fontFamily: "'Raleway', sans-serif",
-              fontSize: 'clamp(11px, 1.2vw, 16px)',
-              color: 'rgba(255,255,255,0.7)',
+              fontSize: 'clamp(12px, 1.3vw, 16px)',
+              color: theme.accentColor,
               textAlign: 'center',
-              letterSpacing: '0.05em',
+              letterSpacing: '0.08em',
+              fontWeight: 600,
+              textTransform: 'uppercase',
+              textShadow: `0 0 8px ${theme.accentColor}40`,
+              opacity: 0.85,
             }}
           >
             Scan to play

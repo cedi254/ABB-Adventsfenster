@@ -190,13 +190,12 @@ export const themes = [
 ];
 
 /**
- * Returns the theme for today based on dayOfYear % themes.length
+ * Returns the theme for a given window number.
+ * Each Advent window (1-24) maps to a fixed theme.
+ * @param {number} windowNumber - The Advent window number (1-24, can extend)
+ * @returns {object} The theme object
  */
-export function getDayTheme() {
-  const now = new Date();
-  const start = new Date(now.getFullYear(), 0, 0);
-  const diff = now - start;
-  const oneDay = 1000 * 60 * 60 * 24;
-  const dayOfYear = Math.floor(diff / oneDay);
-  return themes[dayOfYear % themes.length];
+export function getDayTheme(windowNumber) {
+  if (!windowNumber) return themes[0]; // fallback
+  return themes[(windowNumber - 1) % themes.length];
 }

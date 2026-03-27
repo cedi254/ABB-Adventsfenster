@@ -64,7 +64,9 @@ function writeQuestions(data) {
 function getTodayQuestion() {
   const questions = readQuestions();
   if (!questions.length) return null;
-  const dayIndex = (new Date().getDate() - 1) % questions.length;
+  const config = readConfig();
+  const windowNumber = config.windowNumber || 1;
+  const dayIndex = (windowNumber - 1) % questions.length;
   return questions[dayIndex];
 }
 
@@ -103,7 +105,8 @@ app.post('/api/config', (req, res) => {
 app.get('/api/today', (_req, res) => {
   const q = getTodayQuestion();
   if (!q) return res.status(404).json({ error: 'Keine Frage für heute' });
-  res.json({ question: q.question, day: new Date().getDate() });
+  const config = readConfig();
+  res.json({ question: q.question, day: config.windowNumber });
 });
 
 app.get('/api/questions', (_req, res) => {
