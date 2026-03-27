@@ -1,0 +1,98 @@
+[
+  {
+    "question": "Was hat vier Kerzen und einen immergrünen Ring?",
+    "answer": ["Adventskranz", "advent wreath"]
+  },
+  {
+    "question": "Wer bringt in Deutschland am 6. Dezember die Geschenke?",
+    "answer": ["Nikolaus", "Sankt Nikolaus"]
+  },
+  {
+    "question": "Wie heißt das Rentier mit der roten Nase?",
+    "answer": ["Rudolph", "Rudolf"]
+  },
+  {
+    "question": "In welcher Stadt wurde Jesus Christus geboren?",
+    "answer": ["Bethlehem"]
+  },
+  {
+    "question": "Was steht traditionell auf der Spitze des Weihnachtsbaums?",
+    "answer": ["Stern", "Engel", "Spitze"]
+  },
+  {
+    "question": "Was bedeutet das Wort 'Advent' auf Lateinisch?",
+    "answer": ["Ankunft", "Adventus"]
+  },
+  {
+    "question": "Welches Gewürz ist typisch für Lebkuchen?",
+    "answer": ["Zimt", "Lebkuchengewürz", "Anis"]
+  },
+  {
+    "question": "Wie heißt die berühmte Weihnachtsgeschichte von Charles Dickens?",
+    "answer": ["A Christmas Carol", "Eine Weihnachtsgeschichte", "Christmas Carol"]
+  },
+  {
+    "question": "Welcher König folgte dem Stern nach Bethlehem?",
+    "answer": ["Drei Könige", "Heilige Drei Könige", "Weisen aus dem Morgenland", "Caspar Melchior Balthasar"]
+  },
+  {
+    "question": "Was ist der Weihnachtsmann-Helfer, der mit einer langen Liste kommt?",
+    "answer": ["Knecht Ruprecht", "Krampus", "Ruprecht"]
+  },
+  {
+    "question": "Aus welchem Land stammt der Weihnachtsbaum-Brauch ursprünglich?",
+    "answer": ["Deutschland", "Germany"]
+  },
+  {
+    "question": "Was trinkt man in Deutschland typischerweise auf Weihnachtsmärkten?",
+    "answer": ["Glühwein"]
+  },
+  {
+    "question": "Wie viele Tage dauert der Advent?",
+    "answer": ["28", "vier Wochen", "4 Wochen", "24 Tage"]
+  },
+  {
+    "question": "Was ist ein 'Stollen' in der Weihnachtszeit?",
+    "answer": ["Weihnachtsgebäck", "Kuchen", "Früchtekuchen", "Brot"]
+  },
+  {
+    "question": "Wann ist Heiligabend?",
+    "answer": ["24. Dezember", "24 Dezember", "Vierundzwanzigster Dezember"]
+  },
+  {
+    "question": "Welches Tier wird oft auf Weihnachtskarten dargestellt und hat eine rote Brust?",
+    "answer": ["Rotkehlchen", "Robin"]
+  },
+  {
+    "question": "Was ist der erste Adventssonntag immer?",
+    "answer": ["Sonntag", "Vier Wochen vor Weihnachten", "Vier Sonntage vor Heiligabend"]
+  },
+  {
+    "question": "Wie heißt das bekannteste Weihnachtslied mit den Worten 'Stille Nacht'?",
+    "answer": ["Stille Nacht heilige Nacht", "Stille Nacht", "Silent Night"]
+  },
+  {
+    "question": "Was versteckt man am Abend des 5. Dezember in einen Stiefel?",
+    "answer": ["Süßigkeiten", "Schokolade", "Nüsse", "Orangen", "Geschenke"]
+  },
+  {
+    "question": "Welcher Duft ist typisch für die Weihnachtszeit?",
+    "answer": ["Zimt", "Tannennadeln", "Orange", "Nelken", "Lebkuchen"]
+  },
+  {
+    "question": "Was schmückt man in Deutschland am häufigsten mit Kugeln und Lichtern?",
+    "answer": ["Weihnachtsbaum", "Tannenbaum", "Christbaum"]
+  },
+  {
+    "question": "Wo lebte der Weihnachtsmann laut Tradition?",
+    "answer": ["Nordpol", "Lappland", "Finnland"]
+  },
+  {
+    "question": "Was feiern Christen am 25. Dezember?",
+    "answer": ["Weihnachten", "Geburt Jesu", "Erster Weihnachtstag", "Christmas"]
+  },
+  {
+    "question": "Wie nennt man den Brauch, sich unter Mistelzweigen zu küssen?",
+    "answer": ["Mistelzweig-Brauch", "Mistletoe", "Unter dem Mistelzweig küssen"]
+  }
+]
