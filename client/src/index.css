@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Allow scrolling on admin + mobile pages */
+.scrollable {
+  overflow: auto;
+  height: 100%;
+}
+
+/* ── Aurora particle effect ─────────────────────────────────────────────── */
+.aurora-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aurora-band {
+  position: absolute;
+  width: 250%;
+  left: -75%;
+  filter: blur(40px);
+  border-radius: 50%;
+}
+
+.aurora-1 {
+  height: 180px;
+  top: 15%;
+  background: linear-gradient(90deg, transparent 0%, rgba(45, 212, 191, 0.5) 40%, rgba(45, 212, 191, 0.3) 60%, transparent 100%);
+  animation: aurora-drift 9s ease-in-out infinite;
+}
+
+.aurora-2 {
+  height: 140px;
+  top: 32%;
+  background: linear-gradient(90deg, transparent 0%, rgba(168, 85, 247, 0.4) 35%, rgba(168, 85, 247, 0.3) 65%, transparent 100%);
+  animation: aurora-drift 13s ease-in-out infinite reverse;
+  animation-delay: -4s;
+}
+
+.aurora-3 {
+  height: 160px;
+  top: 52%;
+  background: linear-gradient(90deg, transparent 0%, rgba(52, 211, 153, 0.35) 45%, rgba(52, 211, 153, 0.2) 55%, transparent 100%);
+  animation: aurora-drift 11s ease-in-out infinite;
+  animation-delay: -7s;
+}
+
+.aurora-4 {
+  height: 120px;
+  top: 68%;
+  background: linear-gradient(90deg, transparent 0%, rgba(129, 140, 248, 0.3) 50%, transparent 100%);
+  animation: aurora-drift 15s ease-in-out infinite reverse;
+  animation-delay: -2s;
+}
+
+@keyframes aurora-drift {
+  0%   { transform: translateX(0%) scaleY(1);   opacity: 0.6; }
+  25%  { transform: translateX(15%) scaleY(1.4); opacity: 0.9; }
+  50%  { transform: translateX(30%) scaleY(0.7); opacity: 0.5; }
+  75%  { transform: translateX(15%) scaleY(1.3); opacity: 0.8; }
+  100% { transform: translateX(0%) scaleY(1);   opacity: 0.6; }
+}
+
+/* ── Keyframes used via inline animation: property ──────────────────────── */
+/* (Tailwind only emits keyframes it detects in classNames; these are inline) */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.85; filter: brightness(1); }
+  50%       { opacity: 1;    filter: brightness(1.2); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Window frame glow animation ────────────────────────────────────────── */
+@keyframes frameGlow {
+  0%, 100% { box-shadow: var(--glow-base); }
+  50%       { box-shadow: var(--glow-intense); }
+}
+
+/* ── Number flicker for Ember theme ─────────────────────────────────────── */
+@keyframes emberFlicker {
+  0%, 100% { opacity: 1;    filter: brightness(1); }
+  33%       { opacity: 0.92; filter: brightness(1.15); }
+  66%       { opacity: 0.97; filter: brightness(0.9); }
+}
+
+/* ── Number pulse for Northern Lights ───────────────────────────────────── */
+@keyframes electricPulse {
+  0%, 100% { text-shadow: var(--num-shadow-base); }
+  50%       { text-shadow: var(--num-shadow-intense); }
+}
+
+/* ── Star twinkle ────────────────────────────────────────────────────────── */
+@keyframes twinkle {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%       { opacity: 0.2; transform: scale(0.5); }
+}
+
+/* ── Scrollbar styling for admin ────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
